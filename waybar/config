@@ -1,0 +1,108 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 20,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray","pulseaudio","cpu","memory","network","bluetooth"],
+    
+    "hyprland/window": {
+        "format": "{}"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "clock": {
+    // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%H:%M:%S %Y-%m-%d}",
+        "interval": 1
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+        "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "MUTED{icon} {format_source}",
+        "format-muted": "MUTED{format_source}",
+        "format-source": "{volume}% MIC",
+        "format-source-muted": "MUTED",
+        "format-icons": {
+            "headphone": "VOL",
+            "hands-free": "VOL",
+            "headset": "VOL",
+            "phone": "VOL",
+            "portable": "VOL",
+            "car": "VOL",
+            "default": ["VOL", "VOL", "VOL"]
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "  {signalStrength}%",
+        // "format-ethernet": "{ipaddr}/{cidr}", essid
+        "format-ethernet":  "ETH  {signalStrength}%",
+        "tooltip-format": "ETH - {ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
+    },
+
+    "bluetooth": {
+	    "format": "bluetoоth: {status}",
+	    "format-disabled": "", // an empty format will hide the module
+	    "format-connected": "bluetoоth: {num_connections}",
+	    "tooltip-format": "{device_alias}",
+	    "tooltip-format-connected": "bluetоoth: {device_enumerate}",
+	    "tooltip-format-enumerate-connected": "{device_alias}"
+    }
+},
+"cpu": {
+        "format": "{usage}% CPU",
+        "tooltip": false,
+        "interval": 1
+    },
+"memory": {
+        "format": "{}% RAM",
+        "interval": 1
+}
+}
