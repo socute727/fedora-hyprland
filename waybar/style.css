@@ -63,30 +63,6 @@ tooltip label{
 #bluetooth,
 #temperature,
 #workspaces,
-#tray,
-#backlight {
-    background: #e7e7ec;
-    opacity: 0.8;
-    padding: 0px 10px;
-    margin: 3px 0px;
-    margin-top: 0px;
-    border: 0px;
-}
-
-/* close to left */
-#temperature, #backlight, #custom-myhyprv {
-    border-radius: 10px 0px 0px 10px;
-}
-
-/*close to the right */
-#bluetooth, #custom-light_dark {
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 10px
-}
-#temperature.critical {
-    color: #e92d4d;
-}
-
 #tray {
     border-radius: 0px;
     margin-right: 0px;
